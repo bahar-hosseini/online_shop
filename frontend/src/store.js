@@ -8,7 +8,7 @@ import {
   productListReducer,
   productDetailReducer,
 } from './reducers/productReducers';
-import { cartReducer } from './reducers/cartREducers';
+import { cartReducer } from './reducers/cartReducers';
 
 const reducer = combineReducers({
   productList: productListReducer,
@@ -21,7 +21,9 @@ const cartItemsFromStorage = localStorage.getItem('cartItems')
   : [];
 
 const initialState = {
-  cart: { cartItems: cartItemsFromStorage },
+  cart: {
+    cartItems: cartItemsFromStorage,
+  },
 };
 
 const middleware = [thunk];

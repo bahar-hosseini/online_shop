@@ -21,7 +21,8 @@ import Message from '../components/Message';
 const ProductScreen = ({ match, history }) => {
   const dispatch = useDispatch();
 
-  const [qty, setQty] = useState(0);
+  const [rating, setRating] = useState(0);
+  const [qty, setQty] = useState(1);
 
   const productDetails = useSelector((state) => state.productDetails);
   const { product, loading, error } = productDetails;
@@ -54,7 +55,10 @@ const ProductScreen = ({ match, history }) => {
                 <h3>{product.name}</h3>
               </ListGroup.Item>
               <ListGroup.Item>
-                <Rating value={product.rating} text={`${product.numReviews}`} />
+                <Rating
+                  value={product.rating}
+                  text={`${product.numReviews} reviews`}
+                />
               </ListGroup.Item>
             </ListGroup>
             <ListGroup variant='flush'>

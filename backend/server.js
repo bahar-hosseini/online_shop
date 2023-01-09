@@ -6,6 +6,7 @@ dotenv.config();
 //Internal Modules
 import connectDB from './config/db.js';
 import productRoutes from './routes/productRoutes.js';
+import userRoutes from './routes/userRouter.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 connectDB();
 
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/products', productRoutes);
+app.use('/api/users', userRoutes);
 
 // Define error-handling middleware functions
 //* Not Found

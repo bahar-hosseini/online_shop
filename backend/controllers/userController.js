@@ -1,5 +1,4 @@
 //External Modules
-import express from 'express';
 import asyncHandler from 'express-async-handler';
 
 //Internal Modules
@@ -25,26 +24,6 @@ const authUser = asyncHandler(async (req, res) => {
   } else {
     res.status(401);
     throw new Error('Invalid email or password');
-  }
-});
-
-// @desc    get user profile
-// @route   GET /api/users/profile
-// @access  Private
-
-const getUserProfile = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.user._id);
-
-  if (user) {
-    res.json({
-      _id: user._id,
-      name: user.name,
-      email: user.email,
-      isAdmin: user.isAdmin,
-    });
-  } else {
-    res.status(404);
-    throw new Error('User not found');
   }
 });
 
@@ -81,6 +60,26 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 });
 
+// @desc    get user profile
+// @route   GET /api/users/profile
+// @access  Private
+
+const getUserProfile = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id);
+
+  if (user) {
+    res.json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      isAdmin: user.isAdmin,
+    });
+  } else {
+    res.status(404);
+    throw new Error('User not found');
+  }
+});
+
 // @desc    update user profile
 // @route   PUT /api/users/profile
 // @access  Private
@@ -94,8 +93,9 @@ const updateUserProfile = asyncHandler(async (req, res) => {
       user.password = req.body.password;
     }
     const updatedUser = await user.save();
+
     res.json({
-      id: updatedUser._id,
+      _id: updatedUser._id,
       name: updatedUser.name,
       email: updatedUser.email,
       isAdimn: updatedUser.isAdimn,

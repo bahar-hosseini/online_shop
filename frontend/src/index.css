@@ -18,9 +18,10 @@ a {
 }
 #header{
   width: 100%;
-  height: auto;
+  height: 50%;
 }
-img:hover {
+
+.cardImage:hover {
   animation: shake 2s;
   animation-iteration-count: infinite;
 }

@@ -16,7 +16,7 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <main className='py-3'>
+      <main>
         <Container>
           <Route path='/login' component={LoginScreen} />
           <Route path='/register' component={RegisterScreen} />

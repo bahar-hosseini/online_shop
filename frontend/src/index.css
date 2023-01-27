@@ -1,5 +1,4 @@
 main{
-
   min-height: 80vh;
 }
 
@@ -18,12 +17,14 @@ a {
   text-decoration: none ;
 }
 #header{
-margin-top: 0.01rem;
+/* margin-top: 0.01rem; */
 width: 100vw;
-height: 70vh;
+height: 80vh;
 padding: 0px;
+z-index: -3;
 }
 
+/** Each product in home page**/
 .cardImage{
   height: 200px;
 }
@@ -45,7 +46,20 @@ padding: 0px;
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
-.container{
 
-  margin: 0rem 0rem 0rem 0rem;
+.container{
+  margin: 0rem;
+}
+
+#HomeTitle{
+  padding: 1.5rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.productPage{
+  margin: auto;
+  width: 80vw;
+  padding: 10px;
 }

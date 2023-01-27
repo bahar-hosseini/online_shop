@@ -7,7 +7,7 @@ import Product from '../components/Product';
 import { listProducts } from '../actions/productsAction';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
-import headerImage from '../assets/header.jpeg';
+import headerImage from '../assets/chance.jpg';
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -21,8 +21,8 @@ const HomeScreen = () => {
 
   return (
     <>
-      {/* <h1>Latest products</h1> */}
       <img id='header' src={headerImage} alt='Header' />
+      <h1 id='HomeTitle'>Latest products</h1>
       {loading ? (
         <Loader />
       ) : error ? (

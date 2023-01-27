@@ -17,7 +17,7 @@ const App = () => {
     <Router>
       <Header />
       <main>
-        <Container>
+        <Container className='p-0'>
           <Route path='/login' component={LoginScreen} />
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />

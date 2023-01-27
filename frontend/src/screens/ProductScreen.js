@@ -36,8 +36,8 @@ const ProductScreen = ({ match, history }) => {
   };
 
   return (
-    <>
-      <Link className='btn btn-dark my-3' to='/'>
+    <div className='productPage'>
+      <Link className='btn btn-primary p-3 m-3' to='/'>
         Go Back
       </Link>
       {loading ? (
@@ -49,7 +49,7 @@ const ProductScreen = ({ match, history }) => {
           <Col md={6}>
             <Image src={product.image} alt={product.name} fluid />
           </Col>
-          <Col md={3}>
+          <Col md={6}>
             <ListGroup variant='flush'>
               <ListGroup.Item>
                 <h3>{product.name}</h3>
@@ -111,7 +111,7 @@ const ProductScreen = ({ match, history }) => {
           </Col>
         </Row>
       )}
-    </>
+    </div>
   );
 };
 

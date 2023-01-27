@@ -39,11 +39,11 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    brand: {
+    genre: {
       type: String,
       required: true,
     },
-    category: {
+    NumberOfPlayers: {
       type: String,
       required: true,
     },

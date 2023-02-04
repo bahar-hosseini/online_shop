@@ -15,11 +15,14 @@ Game Station is an e-commerce website that allows people to buy board games.
 - React-Bootstrap
 
 ### Product Page and shopping Cart
-![Product](/docs/part2.gif)
-
+![Product](/docs/product.gif)
 
 ### Signup and Logout
-![Signup](/docs/part1.gif)
+![Signup](/docs/signup.gif)
+
+### Signin page 
+![Signin](/docs/signin.gif)
+
 ### Getting Started
 1. Run `mongod`
 2. Run  `npm run dev` in root directory of the project

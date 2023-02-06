@@ -49,8 +49,7 @@ const ProfileScreen = ({ location, history }) => {
   }, [dispatch, history, userInfo, user, success]);
 
   return (
-    <div>
-      <h1>Test</h1>
+    <div className='m-3'>
       <Row>
         <Col md={3}>
           <h2>User Profile</h2>

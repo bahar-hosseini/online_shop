@@ -22,19 +22,21 @@ const HomeScreen = () => {
   return (
     <>
       <img id='header' src={headerImage} alt='Header' />
-      <h1 id='HomeTitle'>Latest products</h1>
+      <h1 id='HomeTitle'>Latest Products</h1>
       {loading ? (
         <Loader />
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
-        <Row>
-          {products.map((product) => (
-            <Col key={product._id} sm={12} md={6} xl={3}>
-              <Product product={product} />
-            </Col>
-          ))}
-        </Row>
+        <div>
+          <Row>
+            {products.map((product) => (
+              <Col key={product._id} sm={12} md={6} xl={3}>
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
+        </div>
       )}
     </>
   );

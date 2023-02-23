@@ -6,6 +6,9 @@ Game Station is an e-commerce website that allows people to buy board games.
 ### Product Page and shopping Cart
 ![Product](/docs/product.gif)
 
+### shopping Cart and PayPal
+![Cart](/docs/cart.gif)
+
 ### Signup and Logout
 ![Signup](/docs/signup.gif)
 
